@@ -832,3 +832,11 @@ button, a, .carousel-btn, .dot-btn {
   }
 }
 
+/* Destaque no título da seção de processo seletivo */
+.selection h2 em,
+.selection-copy h2 em,
+.labio-orange {
+  font-style: normal;
+  color: var(--red);
+}
+
