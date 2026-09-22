@@ -1,5 +1,9 @@
-# Logs & Cache
+# Skills e automações de IA do agente
+.agents/
+skills-lock.json
 .claude/
+
+# Logs & Cache
 *.log
 npm-debug.log*
 
