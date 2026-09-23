@@ -204,123 +204,97 @@
 
                 <div class="slide-content">
                   <div class="project-tag">PROJETO PRINCIPAL // BIOMEDICAL WEARABLE</div>
-                  <h3 class="project-title">Pulseira Inteligente para Monitoramento de Idosos</h3>
-                  <p class="project-lead">Dispositivo vestível autônomo projetado para proteger a terceira idade através do monitoramento ininterrupto de sinais vitais e resposta imediata a acidentes por quedas.</p>
+                  <h3 class="project-title">Pulseira Inteligente para Idosos</h3>
+                  <p class="project-lead">Dispositivo vestível projetado para proteger a terceira idade através do monitoramento contínuo de sinais vitais e resposta rápida a quedas.</p>
                   
                   <div class="function-breakdown">
-                    <h4 class="function-heading">Como Funciona o Sistema:</h4>
                     <div class="function-step">
                       <div class="step-num">01</div>
                       <div class="step-body">
-                        <h5>Detecção de Queda em Tempo Real (Edge Computing)</h5>
-                        <p>Acelerômetro e giroscópio de 6 eixos processam vetores de desaceleração abrupta e variação angular. Um algoritmo heurístico no microcontrolador analisa o impacto e o repouso posterior no solo para validar a queda com precisão, evitando falsos alarmes causados por gestos rotineiros.</p>
+                        <h5>Detecção de Queda em Tempo Real</h5>
+                        <p>Sensores IMU de 6 eixos com algoritmo para validação de impacto e repouso, prevenindo alarmes falsos.</p>
                       </div>
                     </div>
                     
                     <div class="function-step">
                       <div class="step-num">02</div>
                       <div class="step-body">
-                        <h5>Monitoramento Fotopletismográfico Contínuo (PPG)</h5>
-                        <p>Sensores ópticos emitem pulsos de luz infravermelha e vermelha nos capilares do pulso para aferir continuamente a frequência cardíaca (BPM) e a saturação de oxigênio no sangue (SpO2), gerando alertas precoces para arritmias ou quedas de oxigenação.</p>
+                        <h5>Monitoramento de Sinais Vitais (PPG)</h5>
+                        <p>Sensores ópticos para aferição contínua de frequência cardíaca (BPM) e oxigenação no sangue (SpO2).</p>
                       </div>
                     </div>
 
                     <div class="function-step">
                       <div class="step-num">03</div>
                       <div class="step-body">
-                        <h5>Telemetria e Transmissão de Emergência SOS</h5>
-                        <p>Em caso de queda comprovada ou acionamento do botão físico de pânico pelo idoso, o módulo sem fio (Wi-Fi/Bluetooth Low Energy) dispara uma notificação urgente para os celulares dos cuidadores com a telemetria do paciente.</p>
+                        <h5>Transmissão de Alerta SOS</h5>
+                        <p>Disparo automático de notificações de emergência para celulares de familiares e cuidadores.</p>
                       </div>
                     </div>
                   </div>
 
                   <div class="tech-stack-row">
                     <span class="tech-pill">ESP32-S3</span>
-                    <span class="tech-pill">Sensor PPG Óptico</span>
+                    <span class="tech-pill">Sensor PPG</span>
                     <span class="tech-pill">IMU 6-Eixos</span>
                     <span class="tech-pill">BLE 5.0</span>
-                    <span class="tech-pill">Case Anatômico 3D</span>
+                    <span class="tech-pill">Case 3D</span>
                   </div>
                 </div>
               </div>
             </article>
 
-            <!-- Slide 2: Eletromiógrafo Portátil para Reabilitação -->
+            <!-- Slide 2: Projeto em Desenvolvimento -->
             <article class="carousel-slide" data-index="1">
               <div class="slide-grid">
                 <div class="slide-visual">
-                  <div class="project-art-card">
+                  <div class="project-art-card progress-art-card">
                     <div class="device-mockup-badge">
                       <span class="live-dot pulse-blue"></span>
-                      <span>sEMG LABIO // PESQUISA</span>
+                      <span>LABIO R&D // EM DESENVOLVIMENTO</span>
                     </div>
-                    <div class="device-schematic" aria-label="Esquema do Eletromiógrafo Portátil">
-                      <!-- Ilustração técnica vetorial do EMG -->
-                      <svg viewBox="0 0 340 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="device-svg">
-                        <!-- Placa de circuito de aquisição de sinal muscular -->
-                        <rect x="70" y="60" width="200" height="200" rx="16" fill="#102b31" stroke="#30aefa" stroke-width="2"/>
-                        <!-- Trilhas de PCB -->
-                        <path d="M90 90 L140 90 L140 130 L180 130 L180 170 L230 170" stroke="#30aefa" stroke-width="1.8" stroke-dasharray="3 2" opacity="0.6"/>
-                        <path d="M90 230 L130 230 L130 190 L170 190 L210 190 L210 110" stroke="#ff393e" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.5"/>
-                        <!-- Eletrodos diferenciais -->
-                        <circle cx="110" cy="140" r="16" fill="#0c1f24" stroke="#ff393e" stroke-width="2"/>
-                        <circle cx="110" cy="140" r="7" fill="#ff393e"/>
-                        <circle cx="160" cy="140" r="16" fill="#0c1f24" stroke="#ff393e" stroke-width="2"/>
-                        <circle cx="160" cy="140" r="7" fill="#ff393e"/>
-                        <!-- Amplificador de Instrumentação (INA) -->
-                        <rect x="190" y="125" width="46" height="32" rx="4" fill="#051417" stroke="#30aefa" stroke-width="1.5"/>
-                        <text x="195" y="145" fill="#30aefa" font-family="DM Mono, monospace" font-size="9" font-weight="700">INA128</text>
-                        <!-- Onda de potencial de ação mioelétrica -->
-                        <path d="M85 210 L115 210 L125 195 L135 225 L145 180 L155 240 L165 190 L175 220 L185 205 L255 205" stroke="#30aefa" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <!-- Status text -->
-                        <text x="100" y="278" fill="#849da2" font-family="DM Mono, monospace" font-size="10">FILTRO ANALÓGICO 20-500Hz</text>
-                      </svg>
+                    <div class="project-progress-visual" aria-label="Projeto em desenvolvimento">
+                      <img src="images/em_progresso.png" alt="Projeto em desenvolvimento - LABIO" class="progress-illustration" />
                     </div>
                     <div class="project-card-footer">
-                      <span>MIOELECTRIC SIGNAL LAB</span>
-                      <span class="status-tag pending">PESQUISA TEÓRICA</span>
+                      <span>PESQUISA APLICADA</span>
+                      <span class="status-tag pending">EM PROGRESSO</span>
                     </div>
                   </div>
                 </div>
 
                 <div class="slide-content">
-                  <div class="project-tag">PRÓXIMO PROJETO // REABILITAÇÃO FÍSICA</div>
-                  <h3 class="project-title">Eletromiógrafo de Superfície de Baixo Custo (sEMG)</h3>
-                  <p class="project-lead">Dispositivo voltado para captura, amplificação e processamento digital de potenciais de ação muscular, visando apoio a tratamentos fisioterapêuticos e controle mioelétrico.</p>
+                  <div class="project-tag">PESQUISA & INOVAÇÃO // LABIO</div>
+                  <h3 class="project-title">Projeto em Desenvolvimento</h3>
+                  <p class="project-lead">Uma nova solução tecnológica voltada para a saúde e bem-estar está sendo projetada e construída pelos membros e pesquisadores da LABIO.</p>
                   
-                  <div class="function-breakdown">
-                    <h4 class="function-heading">Como Funciona o Sistema:</h4>
-                    <div class="function-step">
-                      <div class="step-num">01</div>
-                      <div class="step-body">
-                        <h5>Captação e Condicionamento de Biopotenciais</h5>
-                        <p>Eletrodos de superfície capturam sinais microvolts gerados pela despolarização das fibras musculares. O circuito de entrada utiliza amplificador de instrumentação com alta rejeição de modo comum (CMRR > 110dB) para eliminar ruídos da rede elétrica.</p>
+                  <div class="progress-notice-box">
+                    <div class="progress-notice-item">
+                      <div class="progress-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
                       </div>
-                    </div>
-                    
-                    <div class="function-step">
-                      <div class="step-num">02</div>
-                      <div class="step-body">
-                        <h5>Filtragem Ativa e Retificação de Sinal</h5>
-                        <p>Filtros ativos passa-faixa (20 Hz a 500 Hz) e filtro notch de 60 Hz eliminam ruídos de movimento e interferências externas, entregando um sinal límpido para o conversor analógico-digital (ADC).</p>
+                      <div>
+                        <h5>Status do Desenvolvimento</h5>
+                        <p>Atualmente em fase de modelagem, arquitetura de hardware e ensaios experimentais em laboratório.</p>
                       </div>
                     </div>
 
-                    <div class="function-step">
-                      <div class="step-num">03</div>
-                      <div class="step-body">
-                        <h5>Análise de Fadiga e Resposta Terapêutica</h5>
-                        <p>O software calcula a envoltória RMS e a frequência mediana em tempo real, permitindo aos fisioterapeutas quantificar a fadiga muscular e o progresso da recuperação motora.</p>
+                    <div class="progress-notice-item">
+                      <div class="progress-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+                      </div>
+                      <div>
+                        <h5>Divulgação Oficial em Breve</h5>
+                        <p>Os dados técnicos, esquemas de montagem e resultados práticos serão divulgados nos nossos canais.</p>
                       </div>
                     </div>
                   </div>
 
                   <div class="tech-stack-row">
-                    <span class="tech-pill">Eletrodos Ag/AgCl</span>
-                    <span class="tech-pill">Filtro Notch 60Hz</span>
-                    <span class="tech-pill">ADC 16-bits</span>
-                    <span class="tech-pill">Processamento RMS</span>
-                    <span class="tech-pill">Interface Gráfica Web</span>
+                    <span class="tech-pill">Bioengenharia</span>
+                    <span class="tech-pill">Pesquisa Aplicada</span>
+                    <span class="tech-pill">Hardware Físico</span>
+                    <span class="tech-pill">Em Breve</span>
                   </div>
                 </div>
               </div>
