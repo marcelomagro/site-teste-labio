@@ -357,6 +357,7 @@ const initProjectsCarousel = () => {
   let isDragging = false;
 
   viewport?.addEventListener('touchstart', (e) => {
+    if (e.target.closest('#proto-carousel')) return;
     startX = e.touches[0].clientX;
     isDragging = true;
   }, { passive: true });
@@ -380,6 +381,7 @@ const initProjectsCarousel = () => {
   let isMouseDown = false;
 
   viewport?.addEventListener('mousedown', (e) => {
+    if (e.target.closest('#proto-carousel')) return;
     mouseStartX = e.clientX;
     isMouseDown = true;
   });
@@ -399,4 +401,104 @@ const initProjectsCarousel = () => {
 };
 
 initProjectsCarousel();
+
+// -------------------------------------------------------------
+// CARROSSEL DE FOTOS DO PROTÓTIPO (Pulseira LABIO)
+// -------------------------------------------------------------
+const initProtoCarousel = () => {
+  const container = document.getElementById('proto-carousel');
+  if (!container) return;
+
+  const track = document.getElementById('proto-carousel-track');
+  const prevBtn = document.getElementById('proto-prev-btn');
+  const nextBtn = document.getElementById('proto-next-btn');
+  const counter = document.getElementById('proto-counter');
+  const dotsContainer = document.getElementById('proto-dots');
+  const items = track ? track.querySelectorAll('.proto-carousel-item') : [];
+  const totalItems = items.length;
+
+  if (!track || totalItems === 0) return;
+
+  let currentIdx = 0;
+
+  const updateProtoCarousel = (newIdx) => {
+    currentIdx = (newIdx + totalItems) % totalItems;
+    track.style.transform = `translateX(-${currentIdx * 100}%)`;
+
+    if (counter) {
+      counter.textContent = `Foto 0${currentIdx + 1} / 0${totalItems}`;
+    }
+
+    if (dotsContainer) {
+      const dots = dotsContainer.querySelectorAll('.proto-dot');
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIdx);
+        dot.setAttribute('aria-current', String(i === currentIdx));
+      });
+    }
+  };
+
+  prevBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    updateProtoCarousel(currentIdx - 1);
+  });
+
+  nextBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    updateProtoCarousel(currentIdx + 1);
+  });
+
+  if (dotsContainer) {
+    const dots = dotsContainer.querySelectorAll('.proto-dot');
+    dots.forEach((dot, idx) => {
+      dot.addEventListener('click', (e) => {
+        e.stopPropagation();
+        updateProtoCarousel(idx);
+      });
+    });
+  }
+
+  // Touch Swipe para fotos no mobile
+  let protoStartX = 0;
+  let isProtoDragging = false;
+
+  container.addEventListener('touchstart', (e) => {
+    e.stopPropagation();
+    protoStartX = e.touches[0].clientX;
+    isProtoDragging = true;
+  }, { passive: true });
+
+  container.addEventListener('touchend', (e) => {
+    e.stopPropagation();
+    if (!isProtoDragging) return;
+    const endX = e.changedTouches[0].clientX;
+    const diff = protoStartX - endX;
+    if (Math.abs(diff) > 35) {
+      if (diff > 0) {
+        updateProtoCarousel(currentIdx + 1);
+      } else {
+        updateProtoCarousel(currentIdx - 1);
+      }
+    }
+    isProtoDragging = false;
+  }, { passive: true });
+};
+
+initProtoCarousel();
+
+// -------------------------------------------------------------
+// COMPATIBILIDADE DE DOWNLOAD DO EDITAL (file:// vs http/https)
+// -------------------------------------------------------------
+// O Google Chrome/Edge bloqueia por segurança o download direto via atributo
+// 'download' em páginas abertas direto pelo disco (file://), gerando falso 'erro de rede'.
+// Se o usuário estiver testando via file://, abrimos o PDF em nova aba sem erro.
+// Em servidores locais (Live Server) ou em produção (GitHub Pages), o download direto é executado.
+if (window.location.protocol === 'file:') {
+  const downloadLink = document.querySelector('.download-link');
+  if (downloadLink) {
+    downloadLink.removeAttribute('download');
+    downloadLink.setAttribute('title', 'Clique para abrir o edital (em modo local file://)');
+  }
+}
+
 
