@@ -34,7 +34,7 @@
     </header>
 
     <main>
-      <section class="hero section-shell aether-hero">
+      <section class="hero section-shell aether-hero hero-clean-v2">
         <canvas id="aether-canvas" class="aether-canvas" aria-hidden="true"></canvas>
         <div class="hero-copy reveal">
           <p class="eyebrow"><span class="live-dot"></span> Engenharia aplicada à saúde</p>
@@ -43,21 +43,29 @@
           </h1>
           <p class="hero-subbrand">LIGA ACADÊMICA DE BIOENGENHARIA</p>
           <p class="hero-slogan">Desenvolvimento tecnológico para a <em>saúde.</em></p>
-          <p class="hero-text">Somos a Liga Acadêmica de Bioengenharia. Transformamos conhecimento em tecnologia, protótipos e soluções que olham para o futuro da saúde.</p>
+          <p class="hero-text">Somos a Liga Acadêmica de Bioengenharia da Universidade Federal do Piauí (UFPI). Transformamos conhecimento em tecnologia, protótipos funcionais e pesquisa com foco no avanço da saúde pública.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#projetos">Conheça nossos Projetos <span>↓</span></a>
             <a class="text-link" href="#seletivo">Próximo seletivo <span>→</span></a>
           </div>
-        </div>
-        <div class="hero-art bionic-art" aria-label="Prótese robótica de bioengenharia avançada" role="img">
-          <div class="bionic-stage">
-            <div class="bionic-glow" aria-hidden="true"></div>
-            <div class="bionic-halo halo-cyan" aria-hidden="true"></div>
-            <div class="bionic-halo halo-red" aria-hidden="true"></div>
-            <img src="images/robotic_hand_transparent.png" alt="Prótese Robótica de Bioengenharia" class="bionic-hand-img" />
-            <div class="bionic-badge">
-              <span class="live-dot pulse-cyan"></span>
-              <span>//LABIO</span>
+
+          <!-- Faixa de Credenciais Institucionais UFPI & GRASI -->
+          <div class="hero-institutional-strip">
+            <div class="hero-inst-item">
+              <img src="images/brasao_ufpi.png" alt="Brasão da UFPI" class="inst-crest" />
+              <span>UFPI · CENTRO DE TECNOLOGIA</span>
+            </div>
+            <div class="hero-inst-item">
+              <img src="images/grasi_logo_transparent.png" alt="Logo GRASI" class="inst-grasi-logo" />
+              <span>GRASI · UFPI</span>
+            </div>
+            <div class="hero-inst-item">
+              <span class="inst-dot"></span>
+              <span>DEPTO. DE ENGENHARIA ELÉTRICA</span>
+            </div>
+            <div class="hero-inst-item">
+              <span class="inst-dot dot-red"></span>
+              <span>TERESINA - PI</span>
             </div>
           </div>
         </div>
@@ -67,10 +75,28 @@
       <section class="intro section-shell" id="sobre">
         <div class="section-label reveal"><span>01</span> SOBRE A LIGA</div>
         <div class="intro-grid">
-          <h2 class="reveal">Onde a curiosidade<br />ganha <em>propósito.</em></h2>
+          <div class="reveal">
+            <h2>Pesquisa aplicada e<br />impacto na <em>saúde pública.</em></h2>
+            <div class="institutional-badges-group">
+              <div class="ufpi-institutional-badge">
+                <img src="images/brasao_ufpi.png" alt="Brasão da Universidade Federal do Piauí" class="ufpi-badge-crest" />
+                <div>
+                  <strong>Universidade Federal do Piauí</strong>
+                  <span>Centro de Tecnologia · Depto. de Engenharia Elétrica</span>
+                </div>
+              </div>
+              <div class="ufpi-institutional-badge grasi-institutional-badge">
+                <img src="images/grasi_logo_transparent.png" alt="Logotipo do GRASI - Grupo de Automação e Sistemas Inteligentes" class="grasi-badge-logo" />
+                <div>
+                  <strong>GRASI · UFPI</strong>
+                  <span>Grupo de Automação e Sistemas Inteligentes</span>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="intro-copy reveal">
-            <p>A LABIO é uma liga acadêmica do curso de Engenharia Elétrica da Universidade Federal do Piauí (UFPI), que conecta estudantes à área da saúde por meio da bioengenharia.</p>
-            <p>Unimos repertório técnico, colaboração e impacto social para investigar problemas reais — e construir respostas.</p>
+            <p>A LABIO é uma liga acadêmica vinculada ao Centro de Tecnologia (CT) e ao <strong> Departamento de Engenharia Elétrica da Universidade Federal do Piauí (UFPI)</strong>, sediada e integrada aos projetos de pesquisa do GRASI (Grupo de Automação e Sistemas Inteligentes).</p>
+            <p>Atuamos no desenvolvimento prático de dispositivos biomédicos, tecnologias assistivas e sistemas embarcados de baixo custo, unindo rigor científico, ensaios em bancada e extensão comunitária.</p>
             <a class="text-link" href="#projetos">Conheça nossos projetos <span>→</span></a>
           </div>
         </div>
@@ -79,11 +105,11 @@
       <section class="projects section-shell" id="projetos">
         <div class="projects-top reveal">
           <div>
-            <div class="section-label"><span>02</span> PROJETOS & DESENVOLVIMENTO</div>
-            <h2>Inovação em saúde<br />com <em>impacto humano.</em></h2>
+            <div class="section-label"><span>02</span> PROJETOS &amp; DESENVOLVIMENTO</div>
+            <h2>Dispositivos biomédicos<br />em <em>desenvolvimento.</em></h2>
           </div>
           <div class="carousel-controls-wrapper">
-            <p class="projects-desc">Da sala de aula ao protótipo físico: explore as soluções biomédicas projetadas pelos ligantes da LABIO.</p>
+            <p class="projects-desc">Da modelagem de circuitos à fabricação física: conheça as soluções tecnológicas desenvolvidas no laboratório da LABIO.</p>
             <div class="carousel-nav" aria-label="Controles do carrossel">
               <button class="carousel-btn prev" id="carousel-prev-btn" type="button" aria-label="Projeto anterior">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 19l-7-7 7-7"/></svg>
@@ -105,7 +131,7 @@
                   <div class="project-art-card prototype-gallery-card">
                     <div class="device-mockup-badge">
                       <span class="live-dot pulse-red"></span>
-                      <span>PULSEIRA LABIO // PROTÓTIPO FÍSICO</span>
+                      <span>PULSEIRA LABIO · PROTÓTIPO FÍSICO</span>
                     </div>
 
                     <!-- Carrossel de Fotos do Protótipo -->
@@ -123,7 +149,7 @@
                               </button>
                             </div>
                             <div class="proto-photo-placeholder">
-                              <span class="proto-photo-badge">01 // VISÃO GERAL</span>
+                              <span class="proto-photo-badge">FOTO 01 · VISÃO GERAL</span>
                               <div class="proto-photo-icon">
                                 <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                                   <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
@@ -144,7 +170,7 @@
                               </button>
                             </div>
                             <div class="proto-photo-placeholder">
-                              <span class="proto-photo-badge">02 // CASE 3D</span>
+                              <span class="proto-photo-badge">FOTO 02 · MODELAGEM &amp; CASE 3D</span>
                               <div class="proto-photo-icon">
                                 <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                                   <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
@@ -166,7 +192,7 @@
                               </button>
                             </div>
                             <div class="proto-photo-placeholder">
-                              <span class="proto-photo-badge">03 // CIRCUITO</span>
+                              <span class="proto-photo-badge">FOTO 03 · CIRCUITO &amp; SENSORES</span>
                               <div class="proto-photo-icon">
                                 <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                                   <rect x="4" y="4" width="16" height="16" rx="2"></rect>
@@ -188,14 +214,14 @@
                           <!-- FOTO 04 -->
                           <div class="proto-carousel-item" data-title="Plataforma Web de Telemetria e Monitoramento" data-caption="Dashboard em tempo real para acompanhamento dos sinais vitais (BPM, SpO2), alertas de queda e histórico.">
                             <div class="proto-img-container">
-                              <img src="images/site_monitoramento.png" alt="" class="proto-ambient-backdrop" aria-hidden="true" />
-                              <img src="images/site_monitoramento.png" alt="Interface web de monitoramento de dados da pulseira" class="proto-img" />
+                              <img src="images/site_monitoramento.jpg" alt="" class="proto-ambient-backdrop" aria-hidden="true" />
+                              <img src="images/site_monitoramento.jpg" alt="Interface web de monitoramento de dados da pulseira" class="proto-img" />
                               <button class="proto-zoom-trigger" type="button" aria-label="Ampliar interface do dashboard" title="Clique para ampliar">
                                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
                               </button>
                             </div>
                             <div class="proto-photo-placeholder">
-                              <span class="proto-photo-badge">04 // PLATAFORMA WEB</span>
+                              <span class="proto-photo-badge">FOTO 04 · PLATAFORMA WEB</span>
                               <div class="proto-photo-icon">
                                 <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                                   <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
@@ -232,49 +258,49 @@
                     </div>
 
                     <div class="project-card-footer">
-                      <span>GALERIA DO DISPOSITIVO</span>
-                      <span class="status-tag">HARDWARE &amp; SOFTWARE</span>
+                      <span>DOCUMENTAÇÃO TÉCNICA</span>
+                      <span class="status-tag">PROTÓTIPO EM BANCADA</span>
                     </div>
                   </div>
                 </div>
 
                 <div class="slide-content">
-                  <div class="project-tag">PROJETO // DISPOSITIVO VESTÍVEL</div>
+                  <div class="project-tag">TECNOLOGIA ASSISTIVA · DISPOSITIVO VESTÍVEL</div>
                   <h3 class="project-title">Pulseira Inteligente para Monitoramento de Idosos</h3>
-                  <p class="project-lead">Dispositivo vestível projetado para proteger idosos através do monitoramento de sinais vitais e resposta rápida a quedas.</p>
+                  <p class="project-lead">Dispositivo vestível de baixo custo projetado para monitoramento contínuo de sinais vitais e resposta rápida a incidentes de queda em idosos.</p>
                   
                   <div class="function-breakdown">
                     <div class="function-step">
                       <div class="step-num">01</div>
                       <div class="step-body">
                         <h5>Detecção de Queda em Tempo Real</h5>
-                        <p>Sensores IMU de 6 eixos com algoritmo para validação de impacto e repouso, prevenindo alarmes falsos.</p>
+                        <p>Sensores inerciais (IMU de 6 eixos) com algoritmo de classificação de impacto e repouso, prevenindo alarmes falsos em atividades rotineiras.</p>
                       </div>
                     </div>
                     
                     <div class="function-step">
                       <div class="step-num">02</div>
                       <div class="step-body">
-                        <h5>Monitoramento de Sinais Vitais (PPG)</h5>
-                        <p>Sensores ópticos para aferição contínua de frequência cardíaca (BPM) e oxigenação no sangue (SpO2).</p>
+                        <h5>Aferição de Sinais Vitais (PPG)</h5>
+                        <p>Sensor óptico integrado para monitoramento contínuo de frequência cardíaca (BPM) e estimativa de oximetria de pulso (SpO2).</p>
                       </div>
                     </div>
 
                     <div class="function-step">
                       <div class="step-num">03</div>
                       <div class="step-body">
-                        <h5>Transmissão de Alerta SOS</h5>
-                        <p>Disparo automático de notificações de emergência para celulares de familiares e cuidadores.</p>
+                        <h5>Transmissão Sem Fio e Alerta SOS</h5>
+                        <p>Comunicação sem fio (BLE e Wi-Fi) para envio instantâneo de alertas críticos a cuidadores e integração com prontuário web.</p>
                       </div>
                     </div>
                   </div>
 
                   <div class="tech-stack-row">
                     <span class="tech-pill">ESP32-S3</span>
-                    <span class="tech-pill">Sensor PPG</span>
+                    <span class="tech-pill">Sensor PPG Óptico</span>
                     <span class="tech-pill">IMU 6-Eixos</span>
-                    <span class="tech-pill">BLE 5.0</span>
-                    <span class="tech-pill">Case 3D</span>
+                    <span class="tech-pill">Bluetooth BLE</span>
+                    <span class="tech-pill">Impressão 3D PETG</span>
                   </div>
                 </div>
               </div>
@@ -287,22 +313,22 @@
                   <div class="project-art-card progress-art-card">
                     <div class="device-mockup-badge">
                       <span class="live-dot pulse-blue"></span>
-                      <span>LABIO // EM DESENVOLVIMENTO</span>
+                      <span>LABIO · LINHA DE PESQUISA 02</span>
                     </div>
                     <div class="project-progress-visual" aria-label="Projeto em desenvolvimento">
                       <img src="images/em_progresso.png" alt="Projeto em desenvolvimento - LABIO" class="progress-illustration" />
                     </div>
                     <div class="project-card-footer">
                       <span>PESQUISA APLICADA</span>
-                      <span class="status-tag pending">EM PROGRESSO</span>
+                      <span class="status-tag pending">EM EXPERIMENTAÇÃO</span>
                     </div>
                   </div>
                 </div>
 
                 <div class="slide-content">
-                  <div class="project-tag">PESQUISA & INOVAÇÃO // LABIO</div>
-                  <h3 class="project-title">Projeto em Desenvolvimento</h3>
-                  <p class="project-lead">Uma nova solução tecnológica voltada para a saúde e bem-estar está sendo projetada e construída pelos membros e pesquisadores da LABIO.</p>
+                  <div class="project-tag">PESQUISA &amp; INOVAÇÃO · CT / UFPI</div>
+                  <h3 class="project-title">Dispositivo Biomédico em Fase Laboratorial</h3>
+                  <p class="project-lead">Nova frente de pesquisa aplicada voltada para tecnologia assistiva e reabilitação física, conduzida pelos pesquisadores e orientadores da LABIO junto aos laboratórios do GRASI no Centro de Tecnologia da UFPI.</p>
                   
                   <div class="progress-notice-box">
                     <div class="progress-notice-item">
@@ -311,7 +337,7 @@
                       </div>
                       <div>
                         <h5>Status do Desenvolvimento</h5>
-                        <p>Atualmente em fase de modelagem e arquitetura de hardware.</p>
+                        <p>Atualmente em fase de levantamento de requisitos clínicos, diagramação esquemática de placas e simulações preliminares.</p>
                       </div>
                     </div>
 
@@ -320,8 +346,8 @@
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
                       </div>
                       <div>
-                        <h5>Divulgação Oficial em Breve</h5>
-                        <p>Os dados técnicos, esquemas de montagem e resultados práticos serão divulgados nos nossos canais.</p>
+                        <h5>Divulgação de Resultados e Artigos</h5>
+                        <p>Os esquemas de montagem, especificações de componentes e resultados experimentais serão divulgados nos canais oficiais e submetidos a eventos científicos da área.</p>
                       </div>
                     </div>
                   </div>
@@ -329,8 +355,8 @@
                   <div class="tech-stack-row">
                     <span class="tech-pill">Bioengenharia</span>
                     <span class="tech-pill">Pesquisa Aplicada</span>
-                    <span class="tech-pill">Hardware Físico</span>
-                    <span class="tech-pill">Em Breve</span>
+                    <span class="tech-pill">Hardware Livre</span>
+                    <span class="tech-pill">UFPI / CT</span>
                   </div>
                 </div>
               </div>
@@ -349,7 +375,7 @@
           <img src="" alt="" id="proto-lightbox-img" />
         </div>
         <div class="proto-lightbox-info">
-          <span class="proto-lightbox-badge" id="proto-lightbox-badge">LABIO // FOTO PROTÓTIPO</span>
+          <span class="proto-lightbox-badge" id="proto-lightbox-badge">LABIO · REGISTRO TÉCNICO</span>
           <h4 class="proto-lightbox-title" id="proto-lightbox-title">Título da Imagem</h4>
           <p class="proto-lightbox-caption" id="proto-lightbox-caption">Descrição detalhada da foto do protótipo.</p>
         </div>
@@ -366,46 +392,225 @@
 
       <section class="areas" id="frentes">
         <div class="section-shell">
-          <div class="section-heading reveal"><div class="section-label light"><span>03</span> O QUE NOS MOVE</div><h2>Da sala de aula<br />para o mundo <em>real.</em></h2></div>
+          <div class="section-heading reveal">
+            <div class="section-label light"><span>03</span> NÚCLEOS TÉCNICOS</div>
+            <h2>Integração prática entre<br /><em class="labio-orange">Engenharia</em> e <em>Saúde.</em></h2>
+          </div>
           <div class="numbers areas-numbers reveal">
-            <div><strong>5</strong><span>frentes de<br />atuação</span></div>
-            <div><strong>∞</strong><span>ideias para<br />transformar</span></div>
-            <div><strong>1</strong><span>propósito em<br />comum</span></div>
+            <div><strong>5</strong><span>núcleos de formação<br />e projeto</span></div>
+            <div><strong>7</strong><span>membros<br />produzindo</span></div>
+            <div><strong>UFPI</strong><span>Centro de Tecnologia<br />(Teresina - PI)</span></div>
           </div>
           <div class="areas-grid">
-            <article class="area-card reveal"><div class="area-icon code-icon">&lt;/&gt;</div><span class="area-index">01</span><h3>Programação</h3><p>Transformamos dados e lógica em ferramentas que ajudam a enxergar além do óbvio.</p><a href="#seletivo" aria-label="Saiba mais sobre programação">↗</a></article>
-            <article class="area-card reveal"><div class="area-icon proto-icon"><i></i><i></i></div><span class="area-index">02</span><h3>Prototipagem</h3><p>Colocamos ideias em movimento: testamos, iteramos e aprendemos fazendo.</p><a href="#seletivo" aria-label="Saiba mais sobre prototipagem">↗</a></article>
-            <article class="area-card reveal"><div class="area-icon chip-icon"><i></i></div><span class="area-index">03</span><h3>Embarcados</h3><p>Desenvolvemos sistemas inteligentes na fronteira entre hardware e vida.</p><a href="#seletivo" aria-label="Saiba mais sobre sistemas embarcados">↗</a></article>
-            <article class="area-card reveal"><div class="area-icon circuit-icon"><i></i><i></i><i></i></div><span class="area-index">04</span><h3>Eletrônica</h3><p>Exploramos circuitos, sensores e dispositivos para traduzir sinais em cuidado.</p><a href="#seletivo" aria-label="Saiba mais sobre eletrônica">↗</a></article>
-            <article class="area-card reveal"><div class="area-icon control-icon"><i></i><i></i></div><span class="area-index">05</span><h3>Controle</h3><p>Projetamos sistemas que medem, respondem e se adaptam com precisão.</p><a href="#seletivo" aria-label="Saiba mais sobre controle">↗</a></article>
+            <article class="area-card reveal">
+              <div class="area-icon code-icon">&lt;/&gt;</div>
+              <span class="area-index">01</span>
+              <h3>Programação</h3>
+              <p>Processamento digital de sinais biológicos, telemetria em tempo real, dashboards web e algoritmos para apoio ao diagnóstico clínico.</p>
+              <a href="#seletivo" aria-label="Saiba mais sobre programação">↗</a>
+            </article>
+            <article class="area-card reveal">
+              <div class="area-icon proto-icon"><i></i><i></i></div>
+              <span class="area-index">02</span>
+              <h3>Prototipagem</h3>
+              <p>Modelagem tridimensional paramétrica (CAD), manufatura aditiva em filamento técnico (PETG) e fabricação de cases ergonômicas.</p>
+              <a href="#seletivo" aria-label="Saiba mais sobre prototipagem">↗</a>
+            </article>
+            <article class="area-card reveal">
+              <div class="area-icon chip-icon"><i></i></div>
+              <span class="area-index">03</span>
+              <h3>Embarcados</h3>
+              <p>Sistemas dedicados com microcontroladores (ESP32, ARM Cortex), desenvolvimento em C/C++, barramentos I2C/SPI e conectividade.</p>
+              <a href="#seletivo" aria-label="Saiba mais sobre sistemas embarcados">↗</a>
+            </article>
+            <article class="area-card reveal">
+              <div class="area-icon circuit-icon"><i></i><i></i><i></i></div>
+              <span class="area-index">04</span>
+              <h3>Eletrônica</h3>
+              <p>Condicionamento analógico de sinais biológicos, filtragem ativa, layout de placas de circuito impresso (PCBs) e integração de transdutores.</p>
+              <a href="#seletivo" aria-label="Saiba mais sobre eletrônica">↗</a>
+            </article>
+            <article class="area-card reveal">
+              <div class="area-icon control-icon"><i></i><i></i></div>
+              <span class="area-index">05</span>
+              <h3>Controle</h3>
+              <p>Modelagem dinâmica de sistemas fisiológicos, controle em malha fechada para tecnologia assistiva e automação de bancadas de teste.</p>
+              <a href="#seletivo" aria-label="Saiba mais sobre controle">↗</a>
+            </article>
           </div>
         </div>
       </section>
 
       <section class="members section-shell" id="membros">
-        <div class="members-top reveal"><div><div class="section-label"><span>04</span> QUEM FAZ</div><h2>Pessoas movidas<br />por <em>impacto.</em></h2></div><p>Conheça quem transforma a LABIO em um espaço vivo de aprendizado, troca e construção coletiva.</p></div>
-        <div class="member-grid">
-          <article class="member-card lead reveal"><div class="member-portrait portrait-a"><img src="images/orientador_medeiros.png" alt="Prof. Dr. José Medeiros"></div><div class="member-info"><div><p>Professor orientador</p><h3>Prof. Dr. José Medeiros de Araújo Junior</h3></div><a href="http://lattes.cnpq.br/3758667796324850" target="_blank" rel="noopener noreferrer" class="member-social-link" aria-label="Currículo Lattes do Prof. Dr. José Medeiros" title="Ver Currículo Lattes"><img src="images/lattes_icon.png" alt="Lattes" class="member-icon-img" /></a></div></article>
-          <article class="member-card reveal"><div class="member-portrait portrait-b"><img src="images/membro_david.png" alt="David Kauã"></div><div class="member-info"><div><p>Presidência</p><h3>David Kauã</h3></div><a href="javascript:void(0)" target="_blank" rel="noopener noreferrer" class="member-social-link" aria-label="LinkedIn de David Kauã (indisponível)" title="LinkedIn em breve"><img src="images/linkedin_icon.png" alt="LinkedIn" class="member-icon-img" /></a></div></article>
-          <article class="member-card reveal"><div class="member-portrait portrait-c"><img src="images/membro_manoel.png" alt="Manoel Netto"></div><div class="member-info"><div><p>Vice-presidência</p><h3>Manoel Netto</h3></div><a href="javascript:void(0)" target="_blank" rel="noopener noreferrer" class="member-social-link" aria-label="LinkedIn de Manoel Netto (indisponível)" title="LinkedIn em breve"><img src="images/linkedin_icon.png" alt="LinkedIn" class="member-icon-img" /></a></div></article>
-          <article class="member-card reveal"><div class="member-portrait portrait-d"><img src="images/membro_pedro.png" alt="Pedro Henrique"></div><div class="member-info"><div><p>Extensão</p><h3>Pedro Henrique</h3></div><a href="javascript:void(0)" target="_blank" rel="noopener noreferrer" class="member-social-link" aria-label="LinkedIn de Pedro Henrique (indisponível)" title="LinkedIn em breve"><img src="images/linkedin_icon.png" alt="LinkedIn" class="member-icon-img" /></a></div></article>
-          <article class="member-card reveal"><div class="member-portrait portrait-e"><img src="images/membro_marcelo.png" alt="Marcelo Ribeiro"></div><div class="member-info"><div><p>Pesquisa</p><h3>Marcelo Ribeiro</h3></div><a href="https://www.linkedin.com/in/marcelo-ribeiro1/" target="_blank" rel="noopener noreferrer" class="member-social-link" aria-label="LinkedIn de Marcelo Ribeiro" title="Ver LinkedIn de Marcelo Ribeiro"><img src="images/linkedin_icon.png" alt="LinkedIn" class="member-icon-img" /></a></div></article>
-          <article class="member-card reveal"><div class="member-portrait portrait-f"><img src="images/membro_franklin.png" alt="Franklin William"></div><div class="member-info"><div><p>Comunicação</p><h3>Franklin William</h3></div><a href="javascript:void(0)" target="_blank" rel="noopener noreferrer" class="member-social-link" aria-label="LinkedIn de Franklin William (indisponível)" title="LinkedIn em breve"><img src="images/linkedin_icon.png" alt="LinkedIn" class="member-icon-img" /></a></div></article>
-          <article class="member-card reveal"><div class="member-portrait portrait-g"><img src="images/membro_augusto.png" alt="José Augusto"></div><div class="member-info"><div><p>Ensino</p><h3>José Augusto</h3></div><a href="javascript:void(0)" target="_blank" rel="noopener noreferrer" class="member-social-link" aria-label="LinkedIn de José Augusto (indisponível)" title="LinkedIn em breve"><img src="images/linkedin_icon.png" alt="LinkedIn" class="member-icon-img" /></a></div></article>
+        <div class="members-top reveal">
+          <div>
+            <div class="section-label"><span>04</span> CORPO DE PESQUISADORES &amp; MEMBROS</div>
+            <h2>Equipe acadêmica e<br />multidisciplinar da<em> LABIO</em><span>.</span></h2>
+          </div>
+          <p>Discentes e docentes reunidos em torno da pesquisa científica aplicada, desenvolvimento tecnológico e extensão universitária no Centro de Tecnologia.</p>
         </div>
-        <p class="member-note reveal">Membros oficiais da Liga em 2026.2</p>
+        <div class="member-grid">
+          <article class="member-card lead reveal">
+            <div class="member-portrait portrait-a">
+              <span class="member-portrait-badge"><span class="badge-dot"></span>LABIO · UFPI</span>
+              <img src="images/orientador_medeiros.png" alt="Prof. Dr. José Medeiros">
+            </div>
+            <div class="member-info">
+              <div>
+                <p>Professor Orientador</p>
+                <h3>Prof. Dr. José Medeiros de Araújo Junior</h3>
+                <span class="member-course">Depto. de Engenharia Elétrica - CT/UFPI</span>
+              </div>
+              <a href="http://lattes.cnpq.br/3758667796324850" target="_blank" rel="noopener noreferrer" class="member-social-link" aria-label="Currículo Lattes do Prof. Dr. José Medeiros" title="Ver Currículo Lattes">
+                <img src="images/lattes_icon.png" alt="Lattes" class="member-icon-img" />
+              </a>
+            </div>
+          </article>
+          <article class="member-card reveal">
+            <div class="member-portrait portrait-b">
+              <span class="member-portrait-badge"><span class="badge-dot"></span>LABIO · UFPI</span>
+              <img src="images/membro_david.png" alt="David Kauã">
+            </div>
+            <div class="member-info">
+              <div>
+                <p>Presidência</p>
+                <h3>David Kauã</h3>
+                <span class="member-course">Estudante de Engenharia Elétrica</span>
+              </div>
+              <a href="javascript:void(0)" target="_blank" rel="noopener noreferrer" class="member-social-link is-disabled" aria-label="LinkedIn de David Kauã (indisponível)" title="LinkedIn em breve">
+                <img src="images/linkedin_icon.png" alt="LinkedIn" class="member-icon-img" />
+              </a>
+            </div>
+          </article>
+          <article class="member-card reveal">
+            <div class="member-portrait portrait-c">
+              <span class="member-portrait-badge"><span class="badge-dot"></span>LABIO · UFPI</span>
+              <img src="images/membro_manoel.png" alt="Manoel Netto">
+            </div>
+            <div class="member-info">
+              <div>
+                <p>Vice-presidência</p>
+                <h3>Manoel Netto</h3>
+                <span class="member-course">Estudante de Engenharia Elétrica</span>
+              </div>
+              <a href="javascript:void(0)" target="_blank" rel="noopener noreferrer" class="member-social-link is-disabled" aria-label="LinkedIn de Manoel Netto (indisponível)" title="LinkedIn em breve">
+                <img src="images/linkedin_icon.png" alt="LinkedIn" class="member-icon-img" />
+              </a>
+            </div>
+          </article>
+          <article class="member-card reveal">
+            <div class="member-portrait portrait-d">
+              <span class="member-portrait-badge"><span class="badge-dot"></span>LABIO · UFPI</span>
+              <img src="images/membro_pedro.png" alt="Pedro Henrique">
+            </div>
+            <div class="member-info">
+              <div>
+                <p>Diretoria de Extensão</p>
+                <h3>Pedro Henrique</h3>
+                <span class="member-course">Estudante de Engenharia Elétrica</span>
+              </div>
+              <a href="javascript:void(0)" target="_blank" rel="noopener noreferrer" class="member-social-link is-disabled" aria-label="LinkedIn de Pedro Henrique (indisponível)" title="LinkedIn em breve">
+                <img src="images/linkedin_icon.png" alt="LinkedIn" class="member-icon-img" />
+              </a>
+            </div>
+          </article>
+          <article class="member-card reveal">
+            <div class="member-portrait portrait-e">
+              <span class="member-portrait-badge"><span class="badge-dot"></span>LABIO · UFPI</span>
+              <img src="images/membro_marcelo.png" alt="Marcelo Ribeiro">
+            </div>
+            <div class="member-info">
+              <div>
+                <p>Diretoria de Pesquisa</p>
+                <h3>Marcelo Ribeiro</h3>
+                <span class="member-course">Estudante de Engenharia Elétrica</span>
+              </div>
+              <a href="https://www.linkedin.com/in/marcelo-ribeiro1/" target="_blank" rel="noopener noreferrer" class="member-social-link" aria-label="LinkedIn de Marcelo Ribeiro" title="Ver LinkedIn de Marcelo Ribeiro">
+                <img src="images/linkedin_icon.png" alt="LinkedIn" class="member-icon-img" />
+              </a>
+            </div>
+          </article>
+          <article class="member-card reveal">
+            <div class="member-portrait portrait-f">
+              <span class="member-portrait-badge"><span class="badge-dot"></span>LABIO · UFPI</span>
+              <img src="images/membro_franklin.png" alt="Franklin William">
+            </div>
+            <div class="member-info">
+              <div>
+                <p>Diretoria de Comunicação</p>
+                <h3>Franklin William</h3>
+                <span class="member-course">Estudante de Engenharia Elétrica</span>
+              </div>
+              <a href="javascript:void(0)" target="_blank" rel="noopener noreferrer" class="member-social-link is-disabled" aria-label="LinkedIn de Franklin William (indisponível)" title="LinkedIn em breve">
+                <img src="images/linkedin_icon.png" alt="LinkedIn" class="member-icon-img" />
+              </a>
+            </div>
+          </article>
+          <article class="member-card reveal">
+            <div class="member-portrait portrait-g">
+              <span class="member-portrait-badge"><span class="badge-dot"></span>LABIO · UFPI</span>
+              <img src="images/membro_augusto.png" alt="José Augusto">
+            </div>
+            <div class="member-info">
+              <div>
+                <p>Diretoria de Ensino</p>
+                <h3>José Augusto</h3>
+                <span class="member-course">Estudante de Engenharia Elétrica</span>
+              </div>
+              <a href="javascript:void(0)" target="_blank" rel="noopener noreferrer" class="member-social-link is-disabled" aria-label="LinkedIn de José Augusto (indisponível)" title="LinkedIn em breve">
+                <img src="images/linkedin_icon.png" alt="LinkedIn" class="member-icon-img" />
+              </a>
+            </div>
+          </article>
+        </div>
+        <p class="member-note reveal">Membros discentes e pesquisadores · GRASI / Centro de Tecnologia — Universidade Federal do Piauí</p>
       </section>
 
       <section class="selection section-shell" id="seletivo">
         <div class="selection-glow"></div>
         <div class="selection-grid">
-          <div class="selection-copy reveal"><p class="eyebrow"><span class="live-dot"></span> INSCRIÇÕES ABERTAS</p><h2>Construa o próximo passo da <em class="labio-orange">bioengenharia</em><br />com a gente.</h2><p>O processo seletivo da LABIO está aberto. Se você quer aprender, experimentar e construir soluções para a saúde, vem com a gente.</p></div>
-          <div class="selection-card reveal"><p class="card-kicker">PROCESSO SELETIVO 2026</p><h3>Pronto para transformar curiosidade em impacto?</h3><p class="selection-date">Preencha o formulário e receba as próximas etapas do seletivo.</p><div class="selection-actions"><a class="button button-light" href="https://forms.gle/g9QqfSKqn8P1fk6k9" target="_blank" rel="noreferrer">Inscrever-se no seletivo <span>↗</span></a><a class="download-link" href="edital.pdf" download="Edital-LABIO-2026.pdf" target="_blank" rel="noopener noreferrer">Baixar edital <span>↓</span></a></div><small>Substitua o endereço do formulário pelo link oficial.</small></div>
+          <div class="selection-copy reveal">
+            <p class="eyebrow"><span class="live-dot"></span> PROCESSO SELETIVO</p>
+            <h2>Ingresse na Liga Acadêmica de <em class="labio-orange">Bioengenharia</em> da UFPI.</h2>
+            <p>Oportunidade para discentes de graduação de qualquer IES desenvolverem habilidades práticas em engenharia biomédica, sistemas embarcados, modelagem 3D e pesquisa aplicada à saúde pública.</p>
+          </div>
+          <div class="selection-card reveal">
+            <p class="card-kicker">SELEÇÃO 2026 · EDITAL REGULAR</p>
+            <h3>Inscrições abertas para novos membros</h3>
+            <p class="selection-date">Consulte os pré-requisitos no edital e submeta seus dados no formulário de inscrição.</p>
+            <div class="selection-actions">
+              <a class="button button-light" href="https://forms.gle/g9QqfSKqn8P1fk6k9" target="_blank" rel="noreferrer">Inscrever-se no seletivo <span>↗</span></a>
+              <a class="download-link" href="edital_labio_seletivo.pdf" download="Edital-LABIO-2026.pdf" target="_blank" rel="noopener noreferrer">Baixar edital (PDF) <span>↓</span></a>
+            </div>
+            <small>Vagas destinadas a estudantes com matrícula ativa em cursos de graduação.(Verifique o edital para mais informações)</small>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer section-shell"><a class="footer-brand" href="#inicio">LABIO<span>.</span></a><p>Bioengenharia para criar futuros mais humanos.</p><div><a href="https://www.instagram.com/labio.ufpi/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="mailto:labio1484@gmail.com" target="_blank" rel="noopener noreferrer">E-mail</a></div><span class="footer-copy"><img src="images/copyright_icon.png" alt="©" class="footer-copy-icon" /> 2026 LABIO</span></footer>
+    <footer class="footer section-shell">
+      <a class="footer-brand" href="#inicio">LABIO<span>.</span></a>
+      <div class="footer-inst-wrapper">
+        <div class="footer-inst-logos">
+          <img src="images/brasao_ufpi.png" alt="Brasão da UFPI" class="footer-ufpi-crest" />
+          <span class="footer-logo-divider" aria-hidden="true"></span>
+          <img src="images/grasi_logo_transparent.png" alt="Logo do GRASI - Grupo de Automação e Sistemas Inteligentes" class="footer-grasi-logo" />
+        </div>
+        <div class="footer-inst-content">
+          <a href="https://maps.google.com/?q=Centro+de+Tecnologia+UFPI+Teresina" target="_blank" rel="noopener noreferrer" class="footer-address" title="Abrir localização no Google Maps">
+            <svg class="footer-pin-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Laboratório de Automação e Telecomunicações — Centro de Tecnologia (CT), Campus Universitário Ministro Petrônio Portella, Bairro Ininga, Teresina - PI, CEP 64049-550</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="https://www.instagram.com/labio.ufpi/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="mailto:labio1484@gmail.com" target="_blank" rel="noopener noreferrer">E-mail</a>
+        </div>
+        <span class="footer-copy"><img src="images/copyright_icon.png" alt="©" class="footer-copy-icon" /> 2026 LABIO · Todos os direitos reservados</span>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
