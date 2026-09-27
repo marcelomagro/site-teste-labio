@@ -37,12 +37,12 @@
       <section class="hero section-shell aether-hero">
         <canvas id="aether-canvas" class="aether-canvas" aria-hidden="true"></canvas>
         <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="live-dot"></span> Engenharia elétrica aplicada à saúde</p>
+          <p class="eyebrow"><span class="live-dot"></span> Engenharia aplicada à saúde</p>
           <h1 class="hero-name">
             <span class="labio-blue">LA</span><span class="labio-red">BI</span><span class="labio-emblem-wrap"><img src="images/labio-emblema-o.png" alt="O" class="labio-emblem" /></span>
           </h1>
           <p class="hero-subbrand">LIGA ACADÊMICA DE BIOENGENHARIA</p>
-          <p class="hero-slogan">Prototipando o futuro da <em>saúde.</em></p>
+          <p class="hero-slogan">Desenvolvimento tecnológico para a <em>saúde.</em></p>
           <p class="hero-text">Somos a Liga Acadêmica de Bioengenharia. Transformamos conhecimento em tecnologia, protótipos e soluções que olham para o futuro da saúde.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#projetos">Conheça nossos Projetos <span>↓</span></a>
@@ -70,7 +70,7 @@
           <h2 class="reveal">Onde a curiosidade<br />ganha <em>propósito.</em></h2>
           <div class="intro-copy reveal">
             <p>A LABIO é uma liga acadêmica do curso de Engenharia Elétrica da Universidade Federal do Piauí (UFPI), que conecta estudantes à área da saúde por meio da bioengenharia.</p>
-            <p>Unimos repertório técnico, colaboração e impacto social para investigar problemas reais — e construir respostas que possam fazer diferença.</p>
+            <p>Unimos repertório técnico, colaboração e impacto social para investigar problemas reais — e construir respostas.</p>
             <a class="text-link" href="#projetos">Conheça nossos projetos <span>→</span></a>
           </div>
         </div>
@@ -105,18 +105,23 @@
                   <div class="project-art-card prototype-gallery-card">
                     <div class="device-mockup-badge">
                       <span class="live-dot pulse-red"></span>
-                      <span>CAREPULSE LABIO // PROTÓTIPO FÍSICO</span>
+                      <span>PULSEIRA LABIO // PROTÓTIPO FÍSICO</span>
                     </div>
 
-                    <!-- Carrossel de Fotos do Protótipo (Adicione suas fotos na pasta images/) -->
+                    <!-- Carrossel de Fotos do Protótipo -->
                     <div class="prototype-carousel" id="proto-carousel" aria-label="Galeria de fotos do protótipo da pulseira inteligente">
                       <div class="proto-carousel-viewport">
                         <div class="proto-carousel-track" id="proto-carousel-track">
                           
                           <!-- FOTO 01 -->
-                          <div class="proto-carousel-item active">
-                            <!-- Substitua o src abaixo pelo caminho da sua imagem (ex: images/pulseira_1.jpg) -->
-                            <img src="images/pulseira_1.jpg" alt="Foto do protótipo da pulseira - Visão geral" class="proto-img" onerror="this.style.display='none';" onload="this.style.display='block'; if(this.nextElementSibling) this.nextElementSibling.style.display='none';" style="display: none;" />
+                          <div class="proto-carousel-item active" data-title="Protótipo Físico - Visão Geral" data-caption="Visão externa do protótipo montado da pulseira inteligente para monitoramento contínuo de idosos.">
+                            <div class="proto-img-container">
+                              <img src="images/prototipo_final.jpg" alt="" class="proto-ambient-backdrop" aria-hidden="true" />
+                              <img src="images/prototipo_final.jpg" alt="Foto do protótipo da pulseira - Visão geral" class="proto-img" />
+                              <button class="proto-zoom-trigger" type="button" aria-label="Ampliar foto em alta resolução" title="Clique para ampliar">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                              </button>
+                            </div>
                             <div class="proto-photo-placeholder">
                               <span class="proto-photo-badge">01 // VISÃO GERAL</span>
                               <div class="proto-photo-icon">
@@ -126,14 +131,18 @@
                                 </svg>
                               </div>
                               <span class="proto-photo-title">Foto do Protótipo Físico</span>
-                              <span class="proto-photo-hint">Adicione <code>images/pulseira_1.jpg</code></span>
                             </div>
                           </div>
 
                           <!-- FOTO 02 -->
-                          <div class="proto-carousel-item">
-                            <!-- Substitua o src abaixo pelo caminho da sua imagem (ex: images/pulseira_2.jpg) -->
-                            <img src="images/pulseira_2.jpg" alt="Foto do protótipo da pulseira - Case 3D" class="proto-img" onerror="this.style.display='none';" onload="this.style.display='block'; if(this.nextElementSibling) this.nextElementSibling.style.display='none';" style="display: none;" />
+                          <div class="proto-carousel-item" data-title="Design do Case e Impressão 3D" data-caption="Modelagem computacional e fabricação do case ergonômico.">
+                            <div class="proto-img-container">
+                              <img src="images/design_case.jpg" alt="" class="proto-ambient-backdrop" aria-hidden="true" />
+                              <img src="images/design_case.jpg" alt="Foto do protótipo da pulseira - Case 3D" class="proto-img" />
+                              <button class="proto-zoom-trigger" type="button" aria-label="Ampliar foto do case 3D" title="Clique para ampliar">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                              </button>
+                            </div>
                             <div class="proto-photo-placeholder">
                               <span class="proto-photo-badge">02 // CASE 3D</span>
                               <div class="proto-photo-icon">
@@ -144,16 +153,20 @@
                                 </svg>
                               </div>
                               <span class="proto-photo-title">Design do Case e Impressão 3D</span>
-                              <span class="proto-photo-hint">Adicione <code>images/pulseira_2.jpg</code></span>
                             </div>
                           </div>
 
                           <!-- FOTO 03 -->
-                          <div class="proto-carousel-item">
-                            <!-- Substitua o src abaixo pelo caminho da sua imagem (ex: images/pulseira_3.jpg) -->
-                            <img src="images/pulseira_3.jpg" alt="Foto do protótipo da pulseira - Placa e Sensores" class="proto-img" onerror="this.style.display='none';" onload="this.style.display='block'; if(this.nextElementSibling) this.nextElementSibling.style.display='none';" style="display: none;" />
+                          <div class="proto-carousel-item" data-title="Montagem Eletrônica e Circuito" data-caption="Arquitetura de hardware integrada com microcontrolador ESP32-S3 e sensores.">
+                            <div class="proto-img-container">
+                              <img src="images/circuito_pulseira.jpg" alt="" class="proto-ambient-backdrop" aria-hidden="true" />
+                              <img src="images/circuito_pulseira.jpg" alt="Foto do protótipo da pulseira - Circuito" class="proto-img" />
+                              <button class="proto-zoom-trigger" type="button" aria-label="Ampliar foto do circuito" title="Clique para ampliar">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                              </button>
+                            </div>
                             <div class="proto-photo-placeholder">
-                              <span class="proto-photo-badge">03 // CIRCUITO & SENSORES</span>
+                              <span class="proto-photo-badge">03 // CIRCUITO</span>
                               <div class="proto-photo-icon">
                                 <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                                   <rect x="4" y="4" width="16" height="16" rx="2"></rect>
@@ -168,8 +181,30 @@
                                   <line x1="1" y1="14" x2="4" y2="14"></line>
                                 </svg>
                               </div>
-                              <span class="proto-photo-title">Montagem Eletrônica & Bancada</span>
-                              <span class="proto-photo-hint">Adicione <code>images/pulseira_3.jpg</code></span>
+                              <span class="proto-photo-title">Montagem do Circuito</span>
+                            </div>
+                          </div>
+
+                          <!-- FOTO 04 -->
+                          <div class="proto-carousel-item" data-title="Plataforma Web de Telemetria e Monitoramento" data-caption="Dashboard em tempo real para acompanhamento dos sinais vitais (BPM, SpO2), alertas de queda e histórico.">
+                            <div class="proto-img-container">
+                              <img src="images/site_monitoramento.png" alt="" class="proto-ambient-backdrop" aria-hidden="true" />
+                              <img src="images/site_monitoramento.png" alt="Interface web de monitoramento de dados da pulseira" class="proto-img" />
+                              <button class="proto-zoom-trigger" type="button" aria-label="Ampliar interface do dashboard" title="Clique para ampliar">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                              </button>
+                            </div>
+                            <div class="proto-photo-placeholder">
+                              <span class="proto-photo-badge">04 // PLATAFORMA WEB</span>
+                              <div class="proto-photo-icon">
+                                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                                  <polyline points="6 10 9 7 13 11 18 6"></polyline>
+                                </svg>
+                              </div>
+                              <span class="proto-photo-title">Site de Visualização dos Dados</span>
                             </div>
                           </div>
 
@@ -190,22 +225,23 @@
                           <button class="proto-dot active" type="button" aria-label="Ir para foto 1"></button>
                           <button class="proto-dot" type="button" aria-label="Ir para foto 2"></button>
                           <button class="proto-dot" type="button" aria-label="Ir para foto 3"></button>
+                          <button class="proto-dot" type="button" aria-label="Ir para foto 4"></button>
                         </div>
-                        <span class="proto-counter" id="proto-counter">Foto 01 / 03</span>
+                        <span class="proto-counter" id="proto-counter">Foto 01 / 04</span>
                       </div>
                     </div>
 
                     <div class="project-card-footer">
-                      <span>FOTOS DO PROTÓTIPO</span>
-                      <span class="status-tag">HARDWARE REAL</span>
+                      <span>GALERIA DO DISPOSITIVO</span>
+                      <span class="status-tag">HARDWARE &amp; SOFTWARE</span>
                     </div>
                   </div>
                 </div>
 
                 <div class="slide-content">
-                  <div class="project-tag">PROJETO PRINCIPAL // BIOMEDICAL WEARABLE</div>
-                  <h3 class="project-title">Pulseira Inteligente para Idosos</h3>
-                  <p class="project-lead">Dispositivo vestível projetado para proteger a terceira idade através do monitoramento contínuo de sinais vitais e resposta rápida a quedas.</p>
+                  <div class="project-tag">PROJETO // DISPOSITIVO VESTÍVEL</div>
+                  <h3 class="project-title">Pulseira Inteligente para Monitoramento de Idosos</h3>
+                  <p class="project-lead">Dispositivo vestível projetado para proteger idosos através do monitoramento de sinais vitais e resposta rápida a quedas.</p>
                   
                   <div class="function-breakdown">
                     <div class="function-step">
@@ -251,7 +287,7 @@
                   <div class="project-art-card progress-art-card">
                     <div class="device-mockup-badge">
                       <span class="live-dot pulse-blue"></span>
-                      <span>LABIO R&D // EM DESENVOLVIMENTO</span>
+                      <span>LABIO // EM DESENVOLVIMENTO</span>
                     </div>
                     <div class="project-progress-visual" aria-label="Projeto em desenvolvimento">
                       <img src="images/em_progresso.png" alt="Projeto em desenvolvimento - LABIO" class="progress-illustration" />
@@ -275,7 +311,7 @@
                       </div>
                       <div>
                         <h5>Status do Desenvolvimento</h5>
-                        <p>Atualmente em fase de modelagem, arquitetura de hardware e ensaios experimentais em laboratório.</p>
+                        <p>Atualmente em fase de modelagem e arquitetura de hardware.</p>
                       </div>
                     </div>
 
@@ -301,6 +337,25 @@
             </article>
           </div>
         </div>
+
+    <!-- Modal Lightbox para visualização ampliada das fotos do protótipo e dashboard -->
+    <div class="proto-lightbox" id="proto-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Visualização em alta resolução">
+      <div class="proto-lightbox-backdrop" id="proto-lightbox-backdrop"></div>
+      <div class="proto-lightbox-content">
+        <button class="proto-lightbox-close" id="proto-lightbox-close" type="button" aria-label="Fechar visualização">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div class="proto-lightbox-img-wrapper">
+          <img src="" alt="" id="proto-lightbox-img" />
+        </div>
+        <div class="proto-lightbox-info">
+          <span class="proto-lightbox-badge" id="proto-lightbox-badge">LABIO // FOTO PROTÓTIPO</span>
+          <h4 class="proto-lightbox-title" id="proto-lightbox-title">Título da Imagem</h4>
+          <p class="proto-lightbox-caption" id="proto-lightbox-caption">Descrição detalhada da foto do protótipo.</p>
+        </div>
+      </div>
+    </div>
+
 
         <!-- Indicadores de Pontos (Dots) -->
         <div class="carousel-dots" id="carousel-dots" aria-label="Indicadores de slides">
@@ -330,13 +385,13 @@
       <section class="members section-shell" id="membros">
         <div class="members-top reveal"><div><div class="section-label"><span>04</span> QUEM FAZ</div><h2>Pessoas movidas<br />por <em>impacto.</em></h2></div><p>Conheça quem transforma a LABIO em um espaço vivo de aprendizado, troca e construção coletiva.</p></div>
         <div class="member-grid">
-          <article class="member-card lead reveal"><div class="member-portrait portrait-a"><img src="images/orientador_medeiros.png"></div><div class="member-info"><div><p>Professor orientador</p><h3>Prof. Dr. José Medeiros de Araújo Junior</h3></div><a href="#" aria-label="LinkedIn do professor orientador">in</a></div></article>
-          <article class="member-card reveal"><div class="member-portrait portrait-b"><img src="images/membro_david.png"></div><div class="member-info"><div><p>Presidência</p><h3>David Kauã</h3></div><a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de David Kauã">in</a></div></article>
-          <article class="member-card reveal"><div class="member-portrait portrait-c"><img src="images/membro_manoel.png"></div><div class="member-info"><div><p>Vice-presidência</p><h3>Manoel Netto</h3></div><a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Manoel Netto">in</a></div></article>
-          <article class="member-card reveal"><div class="member-portrait portrait-d"><img src="images/membro_pedro.png"></div><div class="member-info"><div><p>Extensão</p><h3>Pedro Henrique</h3></div><a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Pedro Henrique">in</a></div></article>
-          <article class="member-card reveal"><div class="member-portrait portrait-e"><img src="images/membro_marcelo.png"></div><div class="member-info"><div><p>Pesquisa</p><h3>Marcelo Ribeiro</h3></div><a href="https://www.linkedin.com/in/marcelo-ribeiro1/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Marcelo Ribeiro">in</a></div></article>
-          <article class="member-card reveal"><div class="member-portrait portrait-f"><img src="images/membro_franklin.png"></div><div class="member-info"><div><p>Comunicação</p><h3>Franklin William</h3></div><a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Franklin William">in</a></div></article>
-          <article class="member-card reveal"><div class="member-portrait portrait-g"><img src="images/membro_augusto.png"></div><div class="member-info"><div><p>Ensino</p><h3>José Augusto</h3></div><a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de José Augusto">in</a></div></article>
+          <article class="member-card lead reveal"><div class="member-portrait portrait-a"><img src="images/orientador_medeiros.png" alt="Prof. Dr. José Medeiros"></div><div class="member-info"><div><p>Professor orientador</p><h3>Prof. Dr. José Medeiros de Araújo Junior</h3></div><a href="http://lattes.cnpq.br/3758667796324850" target="_blank" rel="noopener noreferrer" class="member-social-link" aria-label="Currículo Lattes do Prof. Dr. José Medeiros" title="Ver Currículo Lattes"><img src="images/lattes_icon.png" alt="Lattes" class="member-icon-img" /></a></div></article>
+          <article class="member-card reveal"><div class="member-portrait portrait-b"><img src="images/membro_david.png" alt="David Kauã"></div><div class="member-info"><div><p>Presidência</p><h3>David Kauã</h3></div><a href="javascript:void(0)" target="_blank" rel="noopener noreferrer" class="member-social-link" aria-label="LinkedIn de David Kauã (indisponível)" title="LinkedIn em breve"><img src="images/linkedin_icon.png" alt="LinkedIn" class="member-icon-img" /></a></div></article>
+          <article class="member-card reveal"><div class="member-portrait portrait-c"><img src="images/membro_manoel.png" alt="Manoel Netto"></div><div class="member-info"><div><p>Vice-presidência</p><h3>Manoel Netto</h3></div><a href="javascript:void(0)" target="_blank" rel="noopener noreferrer" class="member-social-link" aria-label="LinkedIn de Manoel Netto (indisponível)" title="LinkedIn em breve"><img src="images/linkedin_icon.png" alt="LinkedIn" class="member-icon-img" /></a></div></article>
+          <article class="member-card reveal"><div class="member-portrait portrait-d"><img src="images/membro_pedro.png" alt="Pedro Henrique"></div><div class="member-info"><div><p>Extensão</p><h3>Pedro Henrique</h3></div><a href="javascript:void(0)" target="_blank" rel="noopener noreferrer" class="member-social-link" aria-label="LinkedIn de Pedro Henrique (indisponível)" title="LinkedIn em breve"><img src="images/linkedin_icon.png" alt="LinkedIn" class="member-icon-img" /></a></div></article>
+          <article class="member-card reveal"><div class="member-portrait portrait-e"><img src="images/membro_marcelo.png" alt="Marcelo Ribeiro"></div><div class="member-info"><div><p>Pesquisa</p><h3>Marcelo Ribeiro</h3></div><a href="https://www.linkedin.com/in/marcelo-ribeiro1/" target="_blank" rel="noopener noreferrer" class="member-social-link" aria-label="LinkedIn de Marcelo Ribeiro" title="Ver LinkedIn de Marcelo Ribeiro"><img src="images/linkedin_icon.png" alt="LinkedIn" class="member-icon-img" /></a></div></article>
+          <article class="member-card reveal"><div class="member-portrait portrait-f"><img src="images/membro_franklin.png" alt="Franklin William"></div><div class="member-info"><div><p>Comunicação</p><h3>Franklin William</h3></div><a href="javascript:void(0)" target="_blank" rel="noopener noreferrer" class="member-social-link" aria-label="LinkedIn de Franklin William (indisponível)" title="LinkedIn em breve"><img src="images/linkedin_icon.png" alt="LinkedIn" class="member-icon-img" /></a></div></article>
+          <article class="member-card reveal"><div class="member-portrait portrait-g"><img src="images/membro_augusto.png" alt="José Augusto"></div><div class="member-info"><div><p>Ensino</p><h3>José Augusto</h3></div><a href="javascript:void(0)" target="_blank" rel="noopener noreferrer" class="member-social-link" aria-label="LinkedIn de José Augusto (indisponível)" title="LinkedIn em breve"><img src="images/linkedin_icon.png" alt="LinkedIn" class="member-icon-img" /></a></div></article>
         </div>
         <p class="member-note reveal">Membros oficiais da Liga em 2026.2</p>
       </section>
@@ -345,12 +400,12 @@
         <div class="selection-glow"></div>
         <div class="selection-grid">
           <div class="selection-copy reveal"><p class="eyebrow"><span class="live-dot"></span> INSCRIÇÕES ABERTAS</p><h2>Construa o próximo passo da <em class="labio-orange">bioengenharia</em><br />com a gente.</h2><p>O processo seletivo da LABIO está aberto. Se você quer aprender, experimentar e construir soluções para a saúde, vem com a gente.</p></div>
-          <div class="selection-card reveal"><p class="card-kicker">PROCESSO SELETIVO 2026</p><h3>Pronto para transformar curiosidade em impacto?</h3><p class="selection-date">Preencha o formulário e receba as próximas etapas do seletivo.</p><div class="selection-actions"><a class="button button-light" href="https://forms.google.com" target="_blank" rel="noreferrer">Inscrever-se no seletivo <span>↗</span></a><a class="download-link" href="edital.pdf" download="Edital-LABIO-2026.pdf" target="_blank" rel="noopener noreferrer">Baixar edital <span>↓</span></a></div><small>Substitua o endereço do formulário pelo link oficial.</small></div>
+          <div class="selection-card reveal"><p class="card-kicker">PROCESSO SELETIVO 2026</p><h3>Pronto para transformar curiosidade em impacto?</h3><p class="selection-date">Preencha o formulário e receba as próximas etapas do seletivo.</p><div class="selection-actions"><a class="button button-light" href="https://forms.gle/g9QqfSKqn8P1fk6k9" target="_blank" rel="noreferrer">Inscrever-se no seletivo <span>↗</span></a><a class="download-link" href="edital.pdf" download="Edital-LABIO-2026.pdf" target="_blank" rel="noopener noreferrer">Baixar edital <span>↓</span></a></div><small>Substitua o endereço do formulário pelo link oficial.</small></div>
         </div>
       </section>
     </main>
 
-    <footer class="footer section-shell"><a class="footer-brand" href="#inicio">LABIO<span>.</span></a><p>Bioengenharia para criar futuros mais humanos.</p><div><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="mailto:contato@labio.com">E-mail</a></div><span>© 2026 LABIO</span></footer>
+    <footer class="footer section-shell"><a class="footer-brand" href="#inicio">LABIO<span>.</span></a><p>Bioengenharia para criar futuros mais humanos.</p><div><a href="https://www.instagram.com/labio.ufpi/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="mailto:labio1484@gmail.com" target="_blank" rel="noopener noreferrer">E-mail</a></div><span>© 2026 LABIO</span></footer>
     <script src="script.js"></script>
   </body>
 </html>

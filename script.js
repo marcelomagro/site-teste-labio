@@ -487,6 +487,112 @@ const initProtoCarousel = () => {
 initProtoCarousel();
 
 // -------------------------------------------------------------
+// SINCRONIZAÇÃO DE IMAGENS E PLACEHOLDERS DO PROTÓTIPO
+// -------------------------------------------------------------
+const initProtoImages = () => {
+  document.querySelectorAll('.proto-carousel-item').forEach((item) => {
+    const img = item.querySelector('.proto-img');
+    const backdrop = item.querySelector('.proto-ambient-backdrop');
+    const container = item.querySelector('.proto-img-container');
+    const placeholder = item.querySelector('.proto-photo-placeholder');
+
+    if (!img || !placeholder) return;
+
+    const showImage = () => {
+      placeholder.style.display = 'none';
+      if (container) container.style.display = 'flex';
+    };
+
+    const showPlaceholder = () => {
+      // Se for site_monitoramento.png e falhar, tenta .jpg antes de desistir
+      if (img.getAttribute('src')?.includes('site_monitoramento.png') && !img.dataset.retried) {
+        img.dataset.retried = 'true';
+        img.src = 'images/site_monitoramento.jpg';
+        if (backdrop) backdrop.src = 'images/site_monitoramento.jpg';
+        return;
+      }
+      if (container) container.style.display = 'none';
+      placeholder.style.display = 'flex';
+    };
+
+    if (img.complete && img.naturalWidth > 0) {
+      showImage();
+    } else {
+      img.addEventListener('load', showImage);
+      img.addEventListener('error', showPlaceholder);
+    }
+  });
+};
+
+initProtoImages();
+
+// -------------------------------------------------------------
+// LIGHTBOX / ZOOM DAS FOTOS DO PROTÓTIPO E DASHBOARD
+// -------------------------------------------------------------
+const initProtoLightbox = () => {
+  const lightbox = document.getElementById('proto-lightbox');
+  const lightboxImg = document.getElementById('proto-lightbox-img');
+  const lightboxTitle = document.getElementById('proto-lightbox-title');
+  const lightboxCaption = document.getElementById('proto-lightbox-caption');
+  const lightboxBadge = document.getElementById('proto-lightbox-badge');
+  const closeBtn = document.getElementById('proto-lightbox-close');
+  const backdrop = document.getElementById('proto-lightbox-backdrop');
+
+  if (!lightbox || !lightboxImg) return;
+
+  const openLightbox = (item) => {
+    const img = item.querySelector('.proto-img');
+    if (!img || img.style.display === 'none' || img.naturalWidth === 0) return;
+
+    lightboxImg.src = img.currentSrc || img.src;
+    lightboxImg.alt = img.alt || 'Foto do projeto LABIO';
+    if (lightboxTitle) lightboxTitle.textContent = item.dataset.title || 'Protótipo LABIO';
+    if (lightboxCaption) lightboxCaption.textContent = item.dataset.caption || '';
+    if (lightboxBadge) {
+      const badge = item.querySelector('.proto-photo-badge');
+      lightboxBadge.textContent = badge ? badge.textContent : 'LABIO // PROJETO';
+    }
+
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  // Abre ao clicar na imagem ou no botão de lupa/zoom
+  document.querySelectorAll('.proto-carousel-item').forEach((item) => {
+    const container = item.querySelector('.proto-img-container');
+    const zoomBtn = item.querySelector('.proto-zoom-trigger');
+
+    container?.addEventListener('click', (e) => {
+      if (e.target.closest('.proto-nav-btn')) return;
+      openLightbox(item);
+    });
+
+    zoomBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openLightbox(item);
+    });
+  });
+
+  closeBtn?.addEventListener('click', closeLightbox);
+  backdrop?.addEventListener('click', closeLightbox);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
+      closeLightbox();
+    }
+  });
+};
+
+initProtoLightbox();
+
+// -------------------------------------------------------------
 // COMPATIBILIDADE DE DOWNLOAD DO EDITAL (file:// vs http/https)
 // -------------------------------------------------------------
 // O Google Chrome/Edge bloqueia por segurança o download direto via atributo
@@ -500,5 +606,17 @@ if (window.location.protocol === 'file:') {
     downloadLink.setAttribute('title', 'Clique para abrir o edital (em modo local file://)');
   }
 }
+
+// -------------------------------------------------------------
+// MEMBROS - PREVINE QUALQUER AÇÃO EM LINKS INDISPONÍVEIS
+// -------------------------------------------------------------
+document.querySelectorAll('.member-social-link.is-disabled, .member-info a[href=""], .member-info a[href="#"], .member-info a[href^="javascript:"]').forEach((el) => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  });
+});
+
 
 
