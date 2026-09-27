@@ -1442,4 +1442,33 @@ button, a, .carousel-btn, .dot-btn {
   transition: all 0.2s var(--ease);
 }
 
+/* ============================================================== */
+/* FOOTER - ÍCONE DE COPYRIGHT AO LADO DE 2026                   */
+/* ============================================================== */
+.footer span,
+.footer-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font: 500 10px var(--mono);
+  color: #82969a;
+}
+
+.footer-copy-icon {
+  width: 12px;
+  height: 12px;
+  max-width: 12px;
+  max-height: 12px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0.65;
+  transition: opacity 0.2s var(--ease);
+}
+
+.footer span:hover .footer-copy-icon,
+.footer-copy:hover .footer-copy-icon {
+  opacity: 0.95;
+}
+
 
