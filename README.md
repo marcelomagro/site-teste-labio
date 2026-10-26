@@ -24,7 +24,6 @@ O projeto utiliza HTML, CSS e JavaScript, com imagens, ícones, fontes e documen
 │       ├── members/
 │       └── projects/
 ├── docs/
-│   ├── manual-identidade-visual.md
 │   └── brand/
 │       └── labio-original.png
 ├── .editorconfig
