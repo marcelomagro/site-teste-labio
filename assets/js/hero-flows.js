@@ -63,7 +63,7 @@
       track.setAttribute('class', `hero-flow-track ${colorClass}`);
       trackFragment.appendChild(track);
 
-      const duration = (7 + noise(index, 4) * 7) * 0.92;
+      const duration = ((7 + noise(index, 4) * 7) * 0.92) / 2.5;
       const stream = document.createElementNS(namespace, 'path');
       stream.setAttribute('d', pathData);
       stream.setAttribute('pathLength', '1');

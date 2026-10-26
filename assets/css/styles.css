@@ -603,7 +603,7 @@ a {
   z-index: 0;
   contain: paint;
   will-change: transform;
-  animation: labio-gear-spin 57s linear infinite;
+  animation: labio-gear-spin 30s linear infinite;
 }
 
 .emblem-wheel-svg {
